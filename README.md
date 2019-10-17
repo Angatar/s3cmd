@@ -24,7 +24,7 @@ A blank .s3cfg file is also provided as a template in the [.s3 directory of the 
 s3cmd enables you with encryption during transfert with SSL if defined in the config file or if the option in metionned in the command line.
 s3cmd also enables you with encryption at REST with server-side encryption by using the flag --server-side-encryption (e.g: you can specify the KMS key to use on the server), or client side encryption by using the flag -e or --encrypt. These options can also be defined in the .s3cfg config file.
 
-### `s3cmd` documentation
+### s3cmd complete documentation
 
 See [here](http://s3tools.org/usage) for the documentation.
 
@@ -37,7 +37,7 @@ A configmap can easily be created from the .s3cfg config file with the following
 ```sh
 Kubectl create configmap s3config --from-file $HOME/.s3
 ```
-Then, once configured with your data volume/path and your bucket, the CRONJOB can be deployed from the file
+Then, once configured with your data volume/path and your bucket (by completing the file or defining the ENV variables: YOUR_KMS_KEY_ID, YOUR_BUCKET_NAME, NFS_SERVER, SHARED-FOLDER), the CRONJOB can be deployed from the file
 ```sh
 kubectl create -f backup-cronjob.yaml
 ```
