@@ -1,0 +1,43 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: backup-cronjob
+spec:
+  schedule: "0 */6 * * *"
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 2
+  failedJobsHistoryLimit: 1
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: s3databackup
+            image: d3fk/s3cmd:latest
+            args:
+            - sync
+            - --ssl
+            - --server-side-encryption
+            - --server-side-encryption-kms-id= ${YOUR_KMS_KEY_ID}
+            - --recursive
+            - --no-check-md5
+            -  /tmp/DATA/
+            - s3://${YOUR_BUCKET_NAME}/DATA/
+            volumeMounts:
+            - name: data
+              mountPath: /tmp/DATA
+            - name: s3config
+              mountPath: /root/.s3cfg
+              subPath: .s3cfg
+
+          volumes:
+          - name: s3config
+            configMap:
+              name: s3config
+          - name: data
+            nfs:
+              server: ${NFS_SERVER}
+              path: /${SHARED-FOLDER}/
+
+
+          restartPolicy: Never
