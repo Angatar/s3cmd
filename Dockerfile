@@ -1,7 +1,6 @@
 FROM alpine:latest
 MAINTAINER d3fk
 
-
 RUN apk add --no-cache python py-pip py-setuptools git ca-certificates
 
 RUN pip install python-magic \
