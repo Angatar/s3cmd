@@ -41,6 +41,7 @@ Then, once configured with your data volume/path and your bucket (by completing 
 ```sh
 kubectl create -f backup-cronjob.yaml
 ```
+Nb: the option for sync --no-check-md5 speeds up the sync process since only size will be compared but it may also miss some changed files. However this option is usefull with serverside encryption since the md5 signature of the encrypted files in the bucket will be different from the non-encrypted files that you need to back up.
 
 ### s3cmd & mysql backups
 
