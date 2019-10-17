@@ -33,6 +33,6 @@ See [here](http://s3tools.org/usage) for the documentation.
 This container was made to be used within a K8s CRONJOB.
 You can use the provided YAML file named backup-cronjob.yaml as a template for your CRONJOB.
 
-##s3cmd & mysql backups
+### s3cmd & mysql backups
 
 In case you are interested in storing your database dumps into S3 compatible object storage you'd probably prefer to use d3fk/mysql-s3-backup also based on Alpine distrib and containing a mysql client in addition to the s3cmd tool.
