@@ -18,11 +18,11 @@ It basically uses the .s3cfg configuration file. If you are already using s3cmd 
 mkdir .s3
 docker run --rm -ti -v $(pwd):/s3 -v $(pwd)/.s3:/root d3fk/s3cmd --configure
 ```
-A blank .s3cfg file is also provided in the directory as a template if you wish to configure it by yourself from scratch.
+A blank .s3cfg file is also provided in the .s3 directory as a template if you wish to configure it by yourself from scratch.
 
 ### s3cmd and encryption
 s3cmd enable you with encryption during transfert with SSL if defined in the config file or if the option in metionned in the command line.
-s3cmd also enable you with encryption at REST with server-side encryption by using the flag --server-side-encryption (e.g: you can specify the KMS key to use on the server), or client side encryption by using the flag -e or --encrypt.These option can also be defined in the .s3cfg config file.
+s3cmd also enable you with encryption at REST with server-side encryption by using the flag --server-side-encryption (e.g: you can specify the KMS key to use on the server), or client side encryption by using the flag -e or --encrypt. These options can also be defined in the .s3cfg config file.
 
 ### `s3cmd` documentation
 
