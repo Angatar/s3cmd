@@ -18,11 +18,11 @@ It basically uses the .s3cfg configuration file. If you are already using s3cmd 
 mkdir .s3
 docker run --rm -ti -v $(pwd):/s3 -v $(pwd)/.s3:/root d3fk/s3cmd --configure
 ```
-A blank .s3cfg file is also provided in the .s3 directory as a template if you wish to configure it by yourself from scratch.
+A blank .s3cfg file is also provided as a template in the [.s3 directory of the source repository](https://github.com/Angatar/s3cmd/tree/master/.s3), if you wish to configure it by yourself from scratch.
 
 ### s3cmd and encryption
-s3cmd enable you with encryption during transfert with SSL if defined in the config file or if the option in metionned in the command line.
-s3cmd also enable you with encryption at REST with server-side encryption by using the flag --server-side-encryption (e.g: you can specify the KMS key to use on the server), or client side encryption by using the flag -e or --encrypt. These options can also be defined in the .s3cfg config file.
+s3cmd enables you with encryption during transfert with SSL if defined in the config file or if the option in metionned in the command line.
+s3cmd also enables you with encryption at REST with server-side encryption by using the flag --server-side-encryption (e.g: you can specify the KMS key to use on the server), or client side encryption by using the flag -e or --encrypt. These options can also be defined in the .s3cfg config file.
 
 ### `s3cmd` documentation
 
@@ -33,6 +33,14 @@ See [here](http://s3tools.org/usage) for the documentation.
 
 This container was made to be used within a K8s CRONJOB.
 You can use the provided YAML file named backup-cronjob.yaml as a template for your CRONJOB.
+A configmap can easily be created from the .s3cfg config file with the following kubectl command:
+```sh
+Kubectl create configmap s3config --from-file $HOME/.s3
+```
+Then, once configured with your data volume/path and your bucket, the CRONJOB can be deployed from the file
+```sh
+kubectl create -f backup-cronjob.yaml
+```
 
 ### s3cmd & mysql backups
 
