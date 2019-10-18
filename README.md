@@ -6,7 +6,7 @@ Useful with any S3 compatible object storage system.
 ## Basic usage
 
 ```sh
-docker run -v $(pwd):/s3 -v $HOME/.s3:/root d3fk/s3cmd sync . s3://bucket-name
+docker run --rm -v $(pwd):/s3 -v $HOME/.s3:/root d3fk/s3cmd sync . s3://bucket-name
 ```
 The first volume is using your current directory as workdir and the second volume is used for the configuration of your S3 connection.
 
