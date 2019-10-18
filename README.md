@@ -6,7 +6,7 @@ Useful with any S3 compatible object storage system.
 ## Basic usage
 
 ```sh
-$ docker run -v $(pwd):/s3 -v $HOME/.s3:/root d3fk/s3cmd sync . s3://bucket-name
+docker run -v $(pwd):/s3 -v $HOME/.s3:/root d3fk/s3cmd sync . s3://bucket-name
 ```
 The first volume is using your current directory as workdir and the second volume is used for the configuration of your S3 connection.
 
@@ -32,17 +32,17 @@ See [here](http://s3tools.org/usage) for the documentation.
 ## Automatic Periodic Backups with Kubernetes
 
 This container was created to be used within a K8s CRONJOB.
-You can use the provided YAML file named backup-cronjob.yaml as a template for your CRONJOB.
+You can use the provided YAML file named s3-backup-cronjob.yaml as a template for your CRONJOB.
 A configmap can easily be created from the .s3cfg config file with the following kubectl command:
 ```sh
 Kubectl create configmap s3config --from-file $HOME/.s3
 ```
 Then, once configured with your data volume/path and your bucket (by completing the file or defining the ENV variables: YOUR_KMS_KEY_ID, YOUR_BUCKET_NAME, NFS_SERVER, SHARED-FOLDER), the k8s CRONJOB can be created from the file:
 ```sh
-kubectl create -f backup-cronjob.yaml
+kubectl create -f s3-backup-cronjob.yaml
 ```
 *Nb: the option for sync `--no-check-md5` speeds up the sync process since only size will be compared but it may also miss some changed files. However this option is usefull with server side encryption since the md5 signature of the encrypted files in the bucket will be different from the non-encrypted files that you need to back up.*
 
 ### s3cmd & mysql backups
 
-In case you are interested in storing your database dumps into a S3 compatible object storage you'd probably prefer to use d3fk/mysql-s3-backup also based on Alpine distrib and containing a mysql client in addition to the s3cmd tool.
+In case you are interested in storing your database dumps into a S3 compatible object storage you'd probably prefer to use [d3fk/mysql-s3-backup](https://cloud.docker.com/repository/docker/d3fk/mysql-s3-backup) also based on Alpine distrib and containing a mysql client in addition to the s3cmd tool.
