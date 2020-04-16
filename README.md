@@ -1,7 +1,17 @@
-# s3cmd
+# s3cmd (d3fk/s3cmd)
 A simple s3cmd S3 client installed on the Alpine:latest container
 
 Useful with any S3 compatible object storage system.
+
+## Docker image
+
+pre-build from Docker hub with "automated build" option.
+image name **d3fk/s3cmd**
+
+`docker pull d3fk/s3cmd`
+
+Docker hub repository: https://hub.docker.com/r/d3fk/s3cmd/
+
 
 ## Basic usage
 
