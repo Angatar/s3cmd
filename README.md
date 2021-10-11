@@ -1,4 +1,5 @@
-# s3cmd (d3fk/s3cmd)
+![Docker Pulls](https://img.shields.io/docker/pulls/d3fk/s3cmd) ![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/d3fk/s3cmd) ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/d3fk/s3cmd) ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/d3fk/s3cmd) ![Docker Stars](https://img.shields.io/docker/stars/d3fk/s3cmd) [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Angatar/s3cmd/blob/master/LICENSE)
+# s3cmd (Angatar> d3fk/s3cmd)
 A simple s3cmd S3 client installed on the Alpine:latest container
 
 Useful with any S3 compatible object storage system.
@@ -13,6 +14,7 @@ image name **d3fk/s3cmd**
 
 Docker hub repository: https://hub.docker.com/r/d3fk/s3cmd/
 
+[![DockerHub Badge](https://dockeri.co/image/d3fk/s3cmd)](https://hub.docker.com/r/d3fk/s3cmd)
 
 ## Basic usage
 
