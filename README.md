@@ -16,6 +16,20 @@ Docker hub repository: https://hub.docker.com/r/d3fk/s3cmd/
 
 [![DockerHub Badge](https://dockeri.co/image/d3fk/s3cmd)](https://hub.docker.com/r/d3fk/s3cmd)
 
+
+### Image tag d3fk/s3cmd:latest
+
+The **d3fk/s3cmd:latest** image available from the Docker Hub is built automatically (automated build on each change of this [image code repository](https://github.com/Angatar/s3cmd) + automated build triggered once per week) so that using the d3fk/s3cmd:latest image ensures you to have the latest updated(including security fixes) and functional version available of s3cmd in a lightweight alpine image.
+
+### Image tag d3fk/s3cmd:stable
+In case you'd prefer a fixed version of this d3fk/s3cmd container to avoid any possible change in its behaviour, the d3fk/s3cmd:stable image is also made available from the Docker hub. It contains a (s3cmd version 2.2.0 in an Alpine Linux v3.14. This image had a stable behaviour observed in production, so that it was freezed in a release of the code repo and built from the Docker hub by automated build. It won't be changed or rebuilt in the future (the code is available from the "releases" section of this [image code repository on GitHub](https://github.com/Angatar/s3cmd)).
+
+image:tag **d3fk/s3cmd:stable**
+```sh
+$ docker pull d3fk/s3cmd:stable
+```
+
+
 ## Basic usage
 
 ```sh
