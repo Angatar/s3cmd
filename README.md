@@ -1,4 +1,4 @@
-![Docker Pulls](https://img.shields.io/docker/pulls/d3fk/s3cmd) ![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/d3fk/s3cmd) ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/d3fk/s3cmd) ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/d3fk/s3cmd) ![Docker Stars](https://img.shields.io/docker/stars/d3fk/s3cmd) [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Angatar/s3cmd/blob/master/LICENSE)
+![Docker Pulls](https://img.shields.io/docker/pulls/d3fk/s3cmd) ![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/d3fk/s3cmd) ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/d3fk/s3cmd) ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/d3fk/s3cmd) ![Docker Stars](https://img.shields.io/docker/stars/d3fk/s3cmd) [![GitHub license](https://img.shields.io/github/license/Angatar/s3cmd)](https://github.com/Angatar/s3cmd/blob/master/LICENSE)
 # s3cmd (Angatar> d3fk/s3cmd)
 A simple s3cmd S3 client installed on the Alpine:latest container
 
@@ -74,4 +74,4 @@ kubectl create -f s3-backup-cronjob.yaml
 
 In case you are interested in storing your database dumps into a S3 compatible object storage you'd probably prefer to use [d3fk/mysql-s3-backup](https://hub.docker.com/r/d3fk/mysql-s3-backup) also based on Alpine distrib and containing a mysql client in addition to the s3cmd tool.
 
-[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Angatar/s3cmd/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/Angatar/s3cmd)](https://github.com/Angatar/s3cmd/blob/master/LICENSE)
