@@ -59,3 +59,5 @@ kubectl create -f s3-backup-cronjob.yaml
 ### s3cmd & mysql backups
 
 In case you are interested in storing your database dumps into a S3 compatible object storage you'd probably prefer to use [d3fk/mysql-s3-backup](https://hub.docker.com/r/d3fk/mysql-s3-backup) also based on Alpine distrib and containing a mysql client in addition to the s3cmd tool.
+
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Angatar/s3cmd/blob/master/LICENSE)
