@@ -62,7 +62,7 @@ This container was created to be used within a K8s CRONJOB.
 You can use the provided YAML file named s3-backup-cronjob.yaml as a template for your CRONJOB.
 A configmap can easily be created from the .s3cfg config file with the following kubectl command:
 ```sh
-Kubectl create configmap s3config --from-file $HOME/.s3
+kubectl create configmap s3config --from-file $HOME/.s3
 ```
 Then, once configured with your data volume/path and your bucket (by completing the file or defining the ENV variables: YOUR_KMS_KEY_ID, YOUR_BUCKET_NAME, NFS_SERVER, SHARED-FOLDER), the k8s CRONJOB can be created from the file:
 ```sh
