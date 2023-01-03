@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Creating multi-arch builder ahead of build process..."
+docker buildx create \
+--name multiarch \
+--driver docker-container \
+--platform linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x \
+--bootstrap \
+--use
+

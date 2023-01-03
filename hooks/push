@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "The docker multi-arch $IMAGE_NAME was pushed during the buildx build process ..."
+echo  "Build process completed!"
