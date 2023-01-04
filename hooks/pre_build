@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "Installing QEMU emulators on docker-hub build node for multi-arch build process"
+docker run --privileged --rm tonistiigi/binfmt --install all
+
 echo "Creating multi-arch builder ahead of build process..."
 docker buildx create \
 --name multiarch \
