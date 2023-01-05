@@ -9,7 +9,7 @@ RUN pip install python-magic \
   && python3 /tmp/s3cmd/setup.py install \
   && cd / \
   && rm -rf /tmp/s3cmd \
-  && apk del py-pip git
+  && apk del py3-pip git
 
 WORKDIR /s3
 
