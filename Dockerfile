@@ -1,5 +1,5 @@
 FROM alpine:latest
-MAINTAINER d3fk
+LABEL org.opencontainers.image.authors="d3fk"
 
 RUN apk add --no-cache python3 py3-six py-pip py-setuptools git ca-certificates
 
