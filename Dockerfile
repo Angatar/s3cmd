@@ -1,6 +1,7 @@
 FROM alpine:latest
 LABEL org.opencontainers.image.authors="d3fk"
-LABEL org.opencontainers.image.source="https://github.com/Angatar/s3cmd"
+LABEL org.opencontainers.image.source="https://github.com/Angatar/s3cmd.git"
+LABEL org.opencontainers.image.url="https://github.com/Angatar/s3cmd"
 
 RUN apk upgrade \
   && apk add --no-cache python3 py3-six py3-pip py3-setuptools libmagic git ca-certificates \
