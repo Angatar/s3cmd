@@ -1,31 +1,57 @@
-[![Docker Pulls](https://badgen.net/docker/pulls/d3fk/s3cmd?icon=docker&label=pulls)](https://hub.docker.com/r/d3fk/s3cmd/tags) [![Docker Image Size](https://badgen.net/docker/size/d3fk/s3cmd/latest?icon=docker&label=image%20size)](https://hub.docker.com/r/d3fk/s3cmd/tags) [![Docker build](https://img.shields.io/docker/cloud/automated/d3fk/s3cmd?label=build&logo=docker)](https://hub.docker.com/r/d3fk/s3cmd/tags) [![Build status](https://img.shields.io/docker/cloud/build/d3fk/s3cmd?label=build%20status&logo=docker)](https://hub.docker.com/r/d3fk/s3cmd/tags) [![Docker Stars](https://badgen.net/docker/stars/d3fk/s3cmd?icon=docker&label=stars)](https://hub.docker.com/r/d3fk/s3cmd) [![Github Stars](https://badgen.net/github/stars/Angatar/s3cmd?icon=github&color=green)](https://github.com/Angatar/s3cmd) [![Github forks](https://badgen.net/github/forks/Angatar/s3cmd?icon=github)](https://github.com/Angatar/s3cmd/fork) [![Github open issues](https://badgen.net/github/open-issues/Angatar/s3cmd?icon=github)](https://github.com/Angatar/s3cmd/issues) [![Github closed issues](https://badgen.net/github/closed-issues/Angatar/s3cmd?icon=github)](https://github.com/Angatar/s3cmd/issues?q=is%3Aissue+is%3Aclosed) [![GitHub license](https://img.shields.io/github/license/Angatar/s3cmd)](https://github.com/Angatar/s3cmd/blob/master/LICENSE)
+[![Docker Pulls](https://badgen.net/docker/pulls/d3fk/s3cmd?icon=docker&label=pulls)](https://hub.docker.com/r/d3fk/s3cmd/tags) [![Docker Image Size](https://badgen.net/docker/size/d3fk/s3cmd/latest?icon=docker&label=image%20size)](https://hub.docker.com/r/d3fk/s3cmd/tags) [![Docker build](https://img.shields.io/docker/cloud/automated/d3fk/s3cmd?label=build&logo=docker)](https://hub.docker.com/r/d3fk/s3cmd/tags) [![Build status](https://img.shields.io/docker/cloud/build/d3fk/s3cmd?label=build%20status&logo=docker)](https://hub.docker.com/r/d3fk/s3cmd/builds) [![Docker Stars](https://badgen.net/docker/stars/d3fk/s3cmd?icon=docker&label=stars&color=green)](https://hub.docker.com/r/d3fk/s3cmd) [![Github Stars](https://img.shields.io/github/stars/Angatar/s3cmd?label=stars&logo=github&color=green)](https://github.com/Angatar/s3cmd) [![Github forks](https://img.shields.io/github/forks/Angatar/s3cmd?logo=github)](https://github.com/Angatar/s3cmd/fork) [![Github open issues](https://img.shields.io/github/issues-raw/Angatar/s3cmd?logo=github&color=yellow)](https://github.com/Angatar/s3cmd/issues) [![Github closed issues](https://img.shields.io/github/issues-closed-raw/Angatar/s3cmd?logo=github&color=green)](https://github.com/Angatar/s3cmd/issues?q=is%3Aissue+is%3Aclosed) [![GitHub license](https://img.shields.io/github/license/Angatar/s3cmd)](https://github.com/Angatar/s3cmd/blob/master/LICENSE)
+
+
 
 # s3cmd (Angatar> d3fk/s3cmd)
-A simple s3cmd S3 client installed on the Alpine:latest container
+This is a Docker multi-arch image for a simple s3cmd S3 client purely installed on the latest Alpine container
 
-Useful with any S3 compatible object storage system.
+Useful with **any S3 compatible** object storage system.
 
 ## Docker image
 
-pre-build from Docker hub with "automated build" option.
+Pre-build as multi-arch image from Docker hub with "automated build" option.
 
-image name **d3fk/s3cmd**
+- image name: **d3fk/s3cmd**
 
 `docker pull d3fk/s3cmd`
 
 Docker hub repository: https://hub.docker.com/r/d3fk/s3cmd/
 
-[![DockerHub Badge](https://dockeri.co/image/d3fk/s3cmd)](https://hub.docker.com/r/d3fk/s3cmd)
+[![DockerHub Badge](https://lucky-red-wombat.cyclic.app/image/d3fk/s3cmd)](https://hub.docker.com/r/d3fk/s3cmd)
 
 
-### Image tag d3fk/s3cmd:latest
+### Image TAGS
 
-The **d3fk/s3cmd:latest** image available from the Docker Hub is built automatically (automated build on each change of this [image code repository](https://github.com/Angatar/s3cmd) + automated build triggered once per week) so that using the d3fk/s3cmd:latest image ensures you to have the latest updated(including security fixes) and functional version available of s3cmd in a lightweight alpine image.
+***"d3fk/s3cmd:latest" and "d3fk/s3cmd:arch-stable" are both provided as multi-arch images.***
 
-### Image tag d3fk/s3cmd:stable
-In case you'd prefer a fixed version of this d3fk/s3cmd container to avoid any possible change in its behaviour, the d3fk/s3cmd:stable image is also made available from the Docker hub. It contains the s3cmd S3 client version 2.2.0 in an Alpine Linux v3.14. This image had a stable behaviour observed in production, so that it was freezed in a release of the code repo and built from the Docker hub by automated build. It won't be changed or rebuilt in the future (the code is available from the "releases" section of this [image code repository on GitHub](https://github.com/Angatar/s3cmd)).
+*These multi-arch images will fit most of architectures:*
 
-image:tag **d3fk/s3cmd:stable**
+- *linux/amd64*
+- *linux/386*
+- *linux/arm/v6*
+- *linux/arm/v7*
+- *linux/arm64/v8*
+- *linux/ppc64le*
+- *linux/s390x*
+
+
+#### --- Latest ---
+
+- **d3fk/s3cmd:latest** is available as multi-arch image build from Docker Hub nodes dedicated to automated builds. Automated builds are triggered on each change of this [image code repository](https://github.com/Angatar/s3cmd) + once per week so that using the d3fk/s3cmd:latest image ensures you to have the **latest updated (including security fixes) and functional version** available of s3cmd in a lightweight alpine image.
+
+#### --- Stable ---
+
+In case you'd prefer a fixed version of this d3fk/s3cmd container to **avoid any possible change** in its behaviour, the 2 following stable images are also made available from the Docker hub.
+
+- **d3fk/s3cmd:arch-stable** is a multi-arch image with fixed versions. It contains the s3cmd S3 client version 2.3.0 in an Alpine Linux v3.17. This image had a stable behaviour observed in production, so that it was freezed in a release of the code repo and built from the Docker hub by automated build. It won't be changed or rebuilt in the future (the code is available from the "releases" section of this [image code repository on GitHub](https://github.com/Angatar/s3cmd)).
+
+```sh
+$ docker pull d3fk/s3cmd:arch-stable
+```
+
+
+- **d3fk/s3cmd:stable** is our historical initial stable version that we have kept to avoid any breaking issue. It is build for amd64 arch as this initial version was not pushed as a multi-arch image. It contains the s3cmd S3 client version 2.2.0 in an Alpine Linux v3.14. This image had a stable behaviour observed in production, so that it was freezed in a release of the code repo and built from the Docker hub by automated build. It won't be changed or rebuilt in the future (the code is available from the "releases" section of this [image code repository on GitHub](https://github.com/Angatar/s3cmd)).
+
 ```sh
 $ docker pull d3fk/s3cmd:stable
 ```
@@ -75,4 +101,8 @@ kubectl create -f s3-backup-cronjob.yaml
 
 In case you are interested in storing your database dumps into a S3 compatible object storage you'd probably prefer to use [d3fk/mysql-s3-backup](https://hub.docker.com/r/d3fk/mysql-s3-backup) also based on Alpine distrib and containing a mysql client in addition to the s3cmd tool.
 
-[![GitHub license](https://img.shields.io/github/license/Angatar/s3cmd)](https://github.com/Angatar/s3cmd/blob/master/LICENSE)
+
+## License
+
+The content of this [GitHub code repository](https://github.com/Angatar/s3cmd) is provided under **MIT** licence
+[![GitHub license](https://img.shields.io/github/license/Angatar/s3cmd)](https://github.com/Angatar/s3cmd/blob/master/LICENSE). For **s3cmd** license, please see https://github.com/s3tools/s3cmd
