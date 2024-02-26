@@ -9,7 +9,7 @@ RUN apk upgrade --no-cache \
   && cd /tmp/s3cmd \
   && python3 /tmp/s3cmd/setup.py install \
   && cd / \
-  && apk del py3-setuptools git \
+  && apk del git \
   && rm -rf /tmp/s3cmd 
 
 WORKDIR /s3
