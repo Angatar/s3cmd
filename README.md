@@ -17,7 +17,7 @@ Pre-build as multi-arch image from Docker hub with "automated build" option.
 
 Docker hub repository: https://hub.docker.com/r/d3fk/s3cmd/
 
-[![DockerHub Badge](https://lucky-red-wombat.cyclic.app/image/d3fk/s3cmd)](https://hub.docker.com/r/d3fk/s3cmd)
+[![DockerHub Badge](https://dockeri.co/image/d3fk/s3cmd)](https://hub.docker.com/r/d3fk/s3cmd)
 
 
 ### Image TAGS
