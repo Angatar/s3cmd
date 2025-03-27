@@ -5,7 +5,7 @@ LABEL org.opencontainers.image.url="https://github.com/Angatar/s3cmd"
 
 RUN apk upgrade --no-cache \
   &&  echo  https://dl-cdn.alpinelinux.org/alpine/edge/community >> /etc/apk/repositories \
-  && apk add --no-cache ca-certificates s3cmd
+  && apk add --no-cache gpg ca-certificates s3cmd
 
 WORKDIR /s3
 
