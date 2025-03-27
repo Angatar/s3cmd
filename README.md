@@ -22,7 +22,7 @@ Docker hub repository: https://hub.docker.com/r/d3fk/s3cmd/
 
 ### Image TAGS
 
-***"d3fk/s3cmd:latest" and "d3fk/s3cmd:arch-stable" are both provided as multi-arch images.***
+***"d3fk/s3cmd:latest", "d3fk/s3cmd:arch-stable-gpg" and "d3fk/s3cmd:arch-stable" are all provided as multi-arch images.***
 
 *These multi-arch images will fit most of architectures:*
 
@@ -41,7 +41,15 @@ Docker hub repository: https://hub.docker.com/r/d3fk/s3cmd/
 
 #### --- Stable ---
 
-In case you'd prefer a fixed version of this d3fk/s3cmd container to **avoid any possible change** in its behaviour, the 2 following stable images are also made available from the Docker hub.
+In case you'd prefer a fixed version of this d3fk/s3cmd container to **avoid any possible change** in its behaviour, the 3 following stable images are also made available from the Docker hub.
+
+
+- **d3fk/s3cmd:arch-stable-gpg** is a multi-arch image with fixed versions, including GPG for client side encryption. It contains the s3cmd S3 client version 2.4.0 and GPG version 2.4.7 in an Alpine Linux v3.21. It won't be changed or rebuilt in the future (the code is available from the "releases" section of this [image code repository on GitHub](https://github.com/Angatar/s3cmd)).
+
+
+```sh
+$ docker pull d3fk/s3cmd:arch-stable-gpg
+```
 
 - **d3fk/s3cmd:arch-stable** is a multi-arch image with fixed versions. It contains the s3cmd S3 client version 2.3.0 in an Alpine Linux v3.17. This image had a stable behaviour observed in production, so that it was freezed in a release of the code repo and built from the Docker hub by automated build. It won't be changed or rebuilt in the future (the code is available from the "releases" section of this [image code repository on GitHub](https://github.com/Angatar/s3cmd)).
 
